@@ -44,22 +44,16 @@ int main(void)
 ## 第三題
 ```C
 #include <stdio.h>
-int main(void)
+int main()
 {
-    int a,i,n=0;
-    
-    for(i=0;i<=10;i++)
+    int n,i,ans=0;
+    for(i=0;i<10;i++)
     {
-        scanf("%d",&a);
-        if(a%3==0)
-        {
-           n++;
-        }
-    
+        scanf("%d",&n);
+        if(n%3==0)
+           ans++;
     }
-
-    printf("%d\n",n);
-   
+    printf("%d\n",ans);
 }
 ```
 
