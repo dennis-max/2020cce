@@ -28,26 +28,24 @@ int main()
 ## 第二題
 進階題：擲骰統計 : 輸入一字串為擲骰的結果，統計1到6點出現的狀況。
 ```C
-#include <stdio.h>
-
+#include <iostream>
+#include <cstring>
+using namespace std;
 int main()
 {
-    char a[80];
-    int i=0;
-    scanf("%s",&a);
+    char s[81];
+    int c[7]={0};
+    cin>>s;
     
-    while(a[i]!='\0')
+    for(int i=0;i<strlen(s);i++)
     {
-        if(a[i]!='2')
-        {
-           printf("%c",a[i]);
-        
-        }
-        i++;
+        c[s[i]-48]++;
     }
-    printf("\n");
-
-   
+    for(int i=1;i<7;i++)
+    {
+        cout<<i<<":"<<c[i]<<endl;
+    }
+    
     return 0;
 }
 ```
@@ -55,54 +53,59 @@ int main()
 ## 第三題
 進階題：函數找整數的最大數字 : 設計一個函數max_digit(n)，找出組成正整數n中的最大數字，例如：183的最大數字為8。
 ```C
-#include <stdio.h>
-
-int main()
+#include<iostream>
+using namespace std;
+int max_digit(int n)
 {
-    char a[80];
-    int i=0;
-    scanf("%s",&a);
-    
-    while(a[i]!='\0')
+    int max=0;
+    while(n!=0)
     {
-        if(a[i]!='2')
-        {
-           printf("%c",a[i]);
-        
-        }
-        i++;
+        int r=n%10;
+        if(r>max)
+           max=r;
+           n/=10;
     }
-    printf("\n");
-
-   
+    return max;
+}
+int main(){
+    int n;cin>>n;
+    cout<<"["<<max_digit(n)<<"]";
     return 0;
 }
+/* 上方C++ 的 main 函數 等價於 下方 C 的 main 函數
+int main(void){
+  int n;
+  scanf("%d", &n);
+  printf("[%d]", max_digit(n));
+  return 0;
+}
+*/
 ```
 
 ## 第四題
 進階題：星星等腰三角 : 輸入1個正整數n，作為輸出星星三角的層數
 ```C
 #include <stdio.h>
-
 int main()
 {
-    char a[80];
-    int i=0;
-    scanf("%s",&a);
+    int n,i,j;
+    scanf("%d",&n);
     
-    while(a[i]!='\0')
+    for(i=1;i<=n;i++)
     {
-        if(a[i]!='2')
+        for(j=0; j<n-i; j++)
         {
-           printf("%c",a[i]);
-        
+            printf(" ");
         }
-        i++;
+        for(j=0; j<i*2-1; j++)
+        {
+            printf("*");
+            
+        }
+        printf("\n");
+ 
     }
-    printf("\n");
 
-   
-    return 0;
 }
 ```
 
