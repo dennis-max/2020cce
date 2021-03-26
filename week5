@@ -7,49 +7,42 @@
 #include <stdio.h>
 int main()
 {
-    int n,i,a,b,c,d,e;
-    scanf("%d",&n);
-    
-    a=n/10000;
-    b=(n%10000)/1000;
-    c=((n%10000)%1000)/100;
-    d=((((n%10000)%1000))%100)/10;
-    e=(((n%10000)%1000)%100)%10;
-    
-    if(n>=0 && n<=9)
+    int a,b=0,s;
+    scanf("%d",&a);
+    s=a;
+    while(a!=0)
     {
-        printf("%d+%d=%d\n",n,n,n+n);
+        b=b*10+a%10;
+        a=a/10;
     }
-    else if(n>=10 && n<=99)
-    {
-        i=e*10+d*1;
-        printf("%d+%d=%d\n",n,i,n+i);
-    }
-    else if(n>=100 && n<=999)
-    {
-        i=e*100+d*10+c*1;
-        printf("%d+%d=%d\n",n,i,n+i);
-    }
-    else if(n>=1000 && n<=9999)
-    {
-        i=e*1000+d*100+c*10+b*1;
-        printf("%d+%d=%d\n",n,i,n+i);
-    }
-    else if(n>=10000 && n<=99999)
-    {
-        i=e*10000+d*1000+c*100+b*10+a*1;
-        printf("%d+%d=%d\n",n,i,n+i);
-    }
-    
-    return 0;
+    printf("%d+%d=%d",s,b,s+b);
 }
 ```
 
 ## 第二題
 進階題：絕對值函數 : 
 ```C
+#include <stdio.h>
+int f(int n)
+{ 
+    if(n>0)
+    {
+        return n;
+    }
+    else
+    {
+        n=-n;
+        return n;
+    }
+} 
 
-
+int main(void)
+{
+	int n;
+	scanf("%d",&n);
+	printf("[%d]",f(n));
+	return 0;
+}
 ```
 
 ## 第三題
