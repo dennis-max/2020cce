@@ -7,11 +7,11 @@ int main()
     char line2[10]="ask";
     if( strcmp( line, line2 ) > 0)
     {
-        printf("����j\n");
+        printf("¥ªÃä¤j\n");
     }
     else
     {
-        printf("�ЬݬݭȬO�h��: %d", '\0');
+        printf("½Ð¬Ý¬Ý­È¬O¦h¤Ö: %d", '\0');
     }
 }
 
