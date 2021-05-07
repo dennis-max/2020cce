@@ -2,7 +2,7 @@
 typedef struct data
 {
     int ans;
-    char c;///¦r¥À
+    char c;///Â¦rÂ¥Ã€
 }DATA;
 ///struct data box;
 DATA box;
