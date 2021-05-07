@@ -1,3 +1,4 @@
+```C
 #include <stdio.h>
 #include <stdlib.h> ///qsort
 int a[10]={4,8,3,7,5,2,9,1,6,10};
@@ -19,3 +20,4 @@ int main()
     }
 
 }
+```
