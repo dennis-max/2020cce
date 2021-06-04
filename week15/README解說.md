@@ -1,3 +1,4 @@
+```C
 function setup(){//設定 只做一次
   createCanvas(400,200);
 }
@@ -10,3 +11,4 @@ function draw(){
     background(51,109,200);
   }
 }
+```
